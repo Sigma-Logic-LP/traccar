@@ -9,7 +9,7 @@ services:
       MYSQL_USER: traccar
       MYSQL_PASSWORD: traccar
     volumes:
-      - /opt/traccar/data:/var/lib/mysql
+      - /opt/traccar/data:/var/lib/mysql:rw
 
   traccar:
     image: traccar/traccar:latest
@@ -42,7 +42,7 @@ services:
       - "8082:8082"
       - "5000-5500:5000-5500"
     volumes:
-      - /opt/traccar/logs:/opt/traccar/logs
+      - /opt/traccar/logs:/opt/traccar/logs:rw
 
   autoheal:
     image: willfarrell/autoheal:latest
