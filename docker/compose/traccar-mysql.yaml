@@ -32,12 +32,12 @@ services:
         &sessionVariables=sql_mode=''
       DATABASE_USER: traccar
       DATABASE_PASSWORD: traccar
-    healthcheck:
-      test: [ "CMD", "wget", "-q", "--spider", "${TRACCAR_BASE_URL}/api/health" ]
-      interval: 2m
-      timeout: 5s
-      start_period: 1h
-      retries: 3
+    # healthcheck:
+    #   test: [ "CMD", "wget", "-q", "--spider", "${TRACCAR_BASE_URL}/api/health" ]
+    #   interval: 2m
+    #   timeout: 5s
+    #   start_period: 1h
+    #   retries: 3
     ports:
       - "8082:8082"
       - "5000-5500:5000-5500"
