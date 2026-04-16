@@ -19,17 +19,7 @@ services:
     environment:
       CONFIG_USE_ENVIRONMENT_VARIABLES: "true"
       DATABASE_DRIVER: com.mysql.cj.jdbc.Driver
-      DATABASE_URL: >-
-        jdbc:mysql://database:3306/traccar
-        ?zeroDateTimeBehavior=round
-        &serverTimezone=UTC
-        &allowPublicKeyRetrieval=true
-        &useSSL=false
-        &allowMultiQueries=true
-        &autoReconnect=true
-        &useUnicode=yes
-        &characterEncoding=UTF-8
-        &sessionVariables=sql_mode=''
+      DATABASE_URL: "jdbc:mysql://database:3306/traccar?zeroDateTimeBehavior=round&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false&allowMultiQueries=true&autoReconnect=true&useUnicode=yes&characterEncoding=UTF-8&sessionVariables=sql_mode=''"
       DATABASE_USER: traccar
       DATABASE_PASSWORD: traccar
     # healthcheck:
