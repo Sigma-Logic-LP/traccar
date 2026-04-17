@@ -47,3 +47,6 @@ services:
   #     AUTOHEAL_START_PERIOD: 3600
   #   volumes:
   #     - /var/run/docker.sock:/var/run/docker.sock:ro
+
+networks:
+  traccar-net:
