@@ -8,6 +8,8 @@ services:
       MYSQL_DATABASE: traccar
       MYSQL_USER: traccar
       MYSQL_PASSWORD: traccar
+    networks:
+      - traccar-net
     volumes:
       - /opt/traccar/data:/var/lib/mysql
 
@@ -30,7 +32,9 @@ services:
     #   retries: 3
     ports:
       - "8082:8082"
-      # - "5000-5500:5000-5500"
+      - "5000-5500:5000-5500"
+    networks:
+      - traccar-net
     volumes:
       - /opt/traccar/logs:/opt/traccar/logs
 
